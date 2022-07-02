@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import base64
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 
@@ -63,6 +63,6 @@ if st.button('Intercorrelation Heatmap'):
     mask = np.zeros_like(corr)
     mask[np.triu_indices_from(mask)] = True
     with sns.axes_style("white"):
-        f, ax = plt.subplots(figsize=(7, 5))
+        #f, ax = plt.subplots(figsize=(7, 5))
         ax = sns.heatmap(corr, mask=mask, vmax=1, square=True)
     st.pyplot()
